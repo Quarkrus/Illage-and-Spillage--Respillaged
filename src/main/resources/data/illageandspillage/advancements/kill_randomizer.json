@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "illageandspillage:invalid"
+    },
+    "title": {
+      "translate": "advancements.illageandspillage.randomizer_advancement"
+    },
+    "description": {
+      "translate": "advancements.illageandspillage.randomizer_advancement_desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "minecraft:adventure/voluntary_exile",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "illageandspillage:boss_randomizer"
+        }
+      }
+    }
+  }
+}

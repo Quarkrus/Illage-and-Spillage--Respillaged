@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "illageandspillage:item/dark_potion_linger"
+  }
+}

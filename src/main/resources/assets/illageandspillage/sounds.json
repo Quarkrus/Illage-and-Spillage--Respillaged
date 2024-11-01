@@ -1,0 +1,1421 @@
+{
+  "entity.igniter.ambient": {
+    "subtitle": "subtitles.entity.igniter.ambient",
+    "sounds": [
+      "illageandspillage:igniter/idle1",
+      "illageandspillage:igniter/idle2",
+      "illageandspillage:igniter/idle3"
+    ]
+  },
+
+  "entity.igniter.celebrate": {
+    "subtitle": "subtitles.entity.igniter.celebrate",
+    "sounds": [
+      "illageandspillage:igniter/celebrate"
+    ]
+  },
+
+  "entity.igniter.hurt": {
+    "subtitle": "subtitles.entity.igniter.hurt",
+    "sounds": [
+      "illageandspillage:igniter/hurt1",
+      "illageandspillage:igniter/hurt2",
+      "illageandspillage:igniter/hurt3",
+      "illageandspillage:igniter/hurt4"
+    ]
+  },
+
+  "entity.igniter.death": {
+    "subtitle": "subtitles.entity.igniter.death",
+    "sounds": [
+      "illageandspillage:igniter/death"
+    ]
+  },
+
+  "entity.engineer.ambient": {
+    "subtitle": "subtitles.entity.engineer.ambient",
+    "sounds": [
+      "illageandspillage:engineer/ambient1",
+      "illageandspillage:engineer/ambient2",
+      "illageandspillage:engineer/ambient3"
+    ]
+  },
+
+  "entity.engineer.hurt": {
+    "subtitle": "subtitles.entity.engineer.hurt",
+    "sounds": [
+      "illageandspillage:engineer/hurt1",
+      "illageandspillage:engineer/hurt2",
+      "illageandspillage:engineer/hurt3"
+    ]
+  },
+
+  "entity.engineer.death": {
+    "subtitle": "subtitles.entity.engineer.death",
+    "sounds": [
+      "illageandspillage:engineer/death1",
+      "illageandspillage:engineer/death2"
+    ]
+  },
+
+  "entity.engineer.throw": {
+    "subtitle": "subtitles.entity.engineer.throw",
+    "sounds": [
+      "illageandspillage:engineer/throw1",
+      "illageandspillage:engineer/throw2",
+      "illageandspillage:engineer/throw3",
+      "illageandspillage:engineer/throw4",
+      "illageandspillage:engineer/throw5"
+    ]
+  },
+
+  "entity.engineer.repair": {
+    "subtitle": "subtitles.entity.engineer.repair",
+    "sounds": [
+      "illageandspillage:engineer/repair1",
+      "illageandspillage:engineer/repair2",
+      "illageandspillage:engineer/repair3"
+    ]
+  },
+
+  "entity.engineer.hinder.heal": {
+    "subtitle": "subtitles.entity.engineer.hinder.heal",
+    "sounds": [
+      "illageandspillage:engineer/heal"
+    ]
+  },
+
+  "entity.engineer.beeper.beep": {
+    "subtitle": "subtitles.entity.engineer.beeper.beep",
+    "sounds": [
+      "illageandspillage:engineer/beeper_beep"
+    ]
+  },
+
+  "entity.engineer.poker.poke": {
+    "subtitle": "subtitles.entity.engineer.poker.poke",
+    "sounds": [
+      "illageandspillage:engineer/poker_poke"
+    ]
+  },
+
+  "entity.magispeller.intro": {
+    "sounds": [
+      "illageandspillage:magispeller/music_intro"
+    ]
+  },
+
+  "entity.magispeller.music": {
+    "sounds": [
+      "illageandspillage:magispeller/music"
+    ]
+  },
+
+  "entity.magispeller.ambient": {
+    "subtitle": "subtitles.entity.magispeller.ambient",
+    "sounds": [
+      "illageandspillage:magispeller/ambient1",
+      "illageandspillage:magispeller/ambient2",
+      "illageandspillage:magispeller/ambient3",
+      "illageandspillage:magispeller/ambient4"
+    ]
+  },
+
+  "entity.magispeller.celebrate": {
+    "subtitle": "subtitles.entity.magispeller.celebrate",
+    "sounds": [
+      "illageandspillage:magispeller/celebrate"
+    ]
+  },
+
+  "entity.magispeller.hurt": {
+    "subtitle": "subtitles.entity.magispeller.hurt",
+    "sounds": [
+      "illageandspillage:magispeller/hurt1",
+      "illageandspillage:magispeller/hurt2",
+      "illageandspillage:magispeller/hurt3",
+      "illageandspillage:magispeller/hurt4"
+    ]
+  },
+
+  "entity.magispeller.death": {
+    "subtitle": "subtitles.entity.magispeller.death",
+    "sounds": [
+      "illageandspillage:magispeller/death"
+    ]
+  },
+
+  "entity.magispeller.prepare_fakers": {
+    "subtitle": "subtitles.entity.magispeller.prepare_fakers",
+    "sounds": [
+      "illageandspillage:magispeller/fakerclones"
+    ]
+  },
+
+  "entity.magispeller.spin": {
+    "subtitle": "subtitles.entity.magispeller.spin",
+    "sounds": [
+      "illageandspillage:magispeller/spin"
+    ]
+  },
+
+  "entity.magispeller.arrowbarrage": {
+    "subtitle": "subtitles.entity.magispeller.arrowbarrage",
+    "sounds": [
+      "illageandspillage:magispeller/arrowbarrage"
+    ]
+  },
+
+  "entity.magispeller.heal": {
+    "subtitle": "subtitles.entity.magispeller.heal",
+    "sounds": [
+      "illageandspillage:magispeller/heal"
+    ]
+  },
+
+  "entity.magispeller.dispenser": {
+    "subtitle": "subtitles.entity.magispeller.dispenser",
+    "sounds": [
+      "illageandspillage:magispeller/dispenser"
+    ]
+  },
+
+  "entity.magispeller.dispenser_open": {
+    "subtitle": "subtitles.entity.magispeller.dispenser_open",
+    "sounds": [
+      "illageandspillage:magispeller/dispenser_open"
+    ]
+  },
+
+  "entity.magispeller.dispenser_destroy": {
+    "subtitle": "subtitles.entity.magispeller.dispenser_destroy",
+    "sounds": [
+      "illageandspillage:magispeller/dispenser_destroy"
+    ]
+  },
+
+  "entity.magispeller.fangrun": {
+    "subtitle": "subtitles.entity.magispeller.fangrun",
+    "sounds": [
+      "illageandspillage:magispeller/fangrun"
+    ]
+  },
+
+  "entity.magispeller.summon": {
+    "subtitle": "subtitles.entity.magispeller.summon",
+    "sounds": [
+      {
+        "name": "entity.evoker.prepare_summon",
+        "type": "event",
+        "pitch": 1.0
+      }
+    ]
+  },
+
+  "entity.magispeller.cast_spell": {
+    "subtitle": "subtitles.entity.magispeller.cast_spell",
+    "sounds": [
+      {
+        "name": "entity.evoker.cast_spell",
+        "type": "event",
+        "pitch": 1.0
+      }
+    ]
+  },
+
+  "entity.magispeller.fireball": {
+    "subtitle": "subtitles.entity.magispeller.fireball",
+    "sounds": [
+      "illageandspillage:magispeller/fireball"
+    ]
+  },
+
+  "entity.magispeller.life_steal": {
+    "subtitle": "subtitles.entity.magispeller.life_steal",
+    "sounds": [
+      "illageandspillage:magispeller/lifesteal"
+    ]
+  },
+
+  "entity.magispeller.ravager": {
+    "subtitle": "subtitles.entity.magispeller.ravager",
+    "sounds": [
+      "illageandspillage:magispeller/ravager"
+    ]
+  },
+
+  "entity.magispeller.ravager_roar": {
+    "subtitle": "subtitles.entity.magispeller.ravager_roar",
+    "sounds": [
+      "illageandspillage:magispeller/ravager_roar"
+    ]
+  },
+
+  "entity.magispeller.forcefield": {
+    "subtitle": "subtitles.entity.magispeller.forcefield",
+    "sounds": [
+      "illageandspillage:magispeller/forcefield"
+    ]
+  },
+
+  "entity.magispeller.fireball_start": {
+    "subtitle": "subtitles.entity.magispeller.fireball_start",
+    "sounds": [
+      "illageandspillage:magispeller/fireball_start"
+    ]
+  },
+
+  "entity.magispeller.swing_bat": {
+    "subtitle": "subtitles.entity.magispeller.swing_bat",
+    "sounds": [
+      "illageandspillage:magispeller/swing_bat"
+    ]
+  },
+
+  "entity.magispeller.lifesteal_start": {
+    "subtitle": "subtitles.entity.magispeller.lifesteal_start",
+    "sounds": [
+      "illageandspillage:magispeller/lifesteal_start"
+    ]
+  },
+
+  "entity.magispeller.fangrun_start": {
+    "subtitle": "subtitles.entity.magispeller.fangrun_start",
+    "sounds": [
+      "illageandspillage:magispeller/fangrun_start"
+    ]
+  },
+
+  "entity.magispeller.potions": {
+    "subtitle": "subtitles.entity.magispeller.potions",
+    "sounds": [
+      "illageandspillage:magispeller/potions"
+    ]
+  },
+
+  "entity.magispeller.potions_start": {
+    "subtitle": "subtitles.entity.magispeller.potions_start",
+    "sounds": [
+      "illageandspillage:magispeller/potions_start"
+    ]
+  },
+
+  "entity.magispeller.crossbowspin": {
+    "subtitle": "subtitles.entity.magispeller.crossbowspin",
+    "sounds": [
+      "illageandspillage:magispeller/crossbowspin"
+    ]
+  },
+
+  "entity.magispeller.laugh": {
+    "subtitle": "subtitles.entity.magispeller.laugh",
+    "sounds": [
+      "illageandspillage:magispeller/laugh"
+    ]
+  },
+
+  "entity.magispeller.load": {
+    "subtitle": "subtitles.entity.magispeller.load",
+    "sounds": [
+      "illageandspillage:magispeller/load"
+    ]
+  },
+
+  "entity.magispeller.shoot": {
+    "subtitle": "subtitles.entity.magispeller.shoot",
+    "sounds": [
+      "illageandspillage:magispeller/shoot"
+    ]
+  },
+
+  "entity.magispeller.heal_interrupt": {
+    "subtitle": "subtitles.entity.magispeller.heal_interrupt",
+    "sounds": [
+      "illageandspillage:magispeller/heal_interrupt"
+    ]
+  },
+
+  "entity.magispeller.kaboomer_explode": {
+    "subtitle": "subtitles.entity.magispeller.kaboomer_explode",
+    "sounds": [
+      "illageandspillage:magispeller/kaboomer_explode"
+    ]
+  },
+
+  "entity.magispeller.kaboomer_hiss": {
+    "subtitle": "subtitles.entity.magispeller.kaboomer_hiss",
+    "sounds": [
+      "illageandspillage:magispeller/kaboomer_hiss"
+    ]
+  },
+
+  "entity.magispeller.kaboomer": {
+    "subtitle": "subtitles.entity.magispeller.kaboomer",
+    "sounds": [
+      "illageandspillage:magispeller/kaboomer"
+    ]
+  },
+
+  "entity.magispeller.escape": {
+    "subtitle": "subtitles.entity.magispeller.escape",
+    "sounds": [
+      "illageandspillage:magispeller/escape"
+    ]
+  },
+
+  "entity.faker.ambient": {
+    "subtitle": "subtitles.entity.faker.ambient",
+    "sounds": [
+      "illageandspillage:magispeller/faker/ambient1",
+      "illageandspillage:magispeller/faker/ambient2",
+      "illageandspillage:magispeller/faker/ambient3",
+      "illageandspillage:magispeller/faker/ambient4"
+    ]
+  },
+
+  "entity.faker.death": {
+    "subtitle": "subtitles.entity.faker.death",
+    "sounds": [
+      "illageandspillage:magispeller/faker/death"
+    ]
+  },
+
+  "entity.twittollager.ambient": {
+    "subtitle": "subtitles.entity.twittollager.ambient",
+    "sounds": [
+      "illageandspillage:twittollager/ambient1",
+      "illageandspillage:twittollager/ambient2",
+      "illageandspillage:twittollager/ambient3",
+      "illageandspillage:twittollager/ambient4",
+      "illageandspillage:twittollager/ambient5"
+    ]
+  },
+
+  "entity.twittollager.celebrate": {
+    "subtitle": "subtitles.entity.twittollager.celebrate",
+    "sounds": [
+      "illageandspillage:twittollager/celebrate1",
+      "illageandspillage:twittollager/celebrate2",
+      "illageandspillage:twittollager/celebrate3"
+    ]
+  },
+
+  "entity.twittollager.hurt": {
+    "subtitle": "subtitles.entity.twittollager.hurt",
+    "sounds": [
+      "illageandspillage:twittollager/hurt1",
+      "illageandspillage:twittollager/hurt2",
+      "illageandspillage:twittollager/hurt3",
+      "illageandspillage:twittollager/hurt4",
+      "illageandspillage:twittollager/hurt5"
+    ]
+  },
+
+  "entity.twittollager.death": {
+    "subtitle": "subtitles.entity.twittollager.death",
+    "sounds": [
+      "illageandspillage:twittollager/death1",
+      "illageandspillage:twittollager/death2"
+    ]
+  },
+
+  "entity.twittollager.scream": {
+    "subtitle": "subtitles.entity.twittollager.scream",
+    "sounds": [
+      "illageandspillage:twittollager/scream1",
+      "illageandspillage:twittollager/scream2",
+      "illageandspillage:twittollager/scream3",
+      "illageandspillage:twittollager/scream4"
+    ]
+  },
+
+  "entity.twittollager.explode": {
+    "subtitle": "subtitles.entity.twittollager.explode",
+    "sounds": [
+      "illageandspillage:twittollager/explode"
+    ]
+  },
+
+  "entity.twittollager.ding": {
+    "subtitle": "subtitles.entity.twittollager.ding",
+    "sounds": [
+      "illageandspillage:twittollager/ding"
+    ]
+  },
+
+  "entity.twittollager.hmm": {
+    "subtitle": "subtitles.entity.twittollager.hmm",
+    "sounds": [
+      "illageandspillage:twittollager/hmm1",
+      "illageandspillage:twittollager/hmm2",
+      "illageandspillage:twittollager/hmm3"
+    ]
+  },
+
+  "entity.twittollager.angry": {
+    "subtitle": "subtitles.entity.twittollager.angry",
+    "sounds": [
+      "illageandspillage:twittollager/angry1"
+    ]
+  },
+
+  "entity.twittollager.charge": {
+    "subtitle": "subtitles.entity.twittollager.charge",
+    "sounds": [
+      "illageandspillage:twittollager/charge2"
+    ]
+  },
+
+  "entity.spiritcaller.wings": {
+    "subtitle": "subtitles.entity.spiritcaller.wings",
+    "sounds": [
+      "illageandspillage:spiritcaller/wings1",
+      "illageandspillage:spiritcaller/wings2",
+      "illageandspillage:spiritcaller/wings3",
+      "illageandspillage:spiritcaller/wings4",
+      "illageandspillage:spiritcaller/wings5"
+    ]
+  },
+
+  "entity.spiritcaller.ambient": {
+    "subtitle": "subtitles.entity.spiritcaller.ambient",
+    "sounds": [
+      "illageandspillage:spiritcaller/ambient1",
+      "illageandspillage:spiritcaller/ambient2",
+      "illageandspillage:spiritcaller/ambient3",
+      "illageandspillage:spiritcaller/ambient4",
+      "illageandspillage:spiritcaller/ambient5"
+    ]
+  },
+
+  "entity.spiritcaller.celebrate": {
+    "subtitle": "subtitles.entity.spiritcaller.celebrate",
+    "sounds": [
+      "illageandspillage:spiritcaller/ambient1",
+      "illageandspillage:spiritcaller/ambient3"
+    ]
+  },
+
+  "entity.spiritcaller.hurt": {
+    "subtitle": "subtitles.entity.spiritcaller.hurt",
+    "sounds": [
+      "illageandspillage:spiritcaller/hurt1",
+      "illageandspillage:spiritcaller/hurt2",
+      "illageandspillage:spiritcaller/hurt3"
+    ]
+  },
+
+  "entity.spiritcaller.death": {
+    "subtitle": "subtitles.entity.spiritcaller.death",
+    "sounds": [
+      "illageandspillage:spiritcaller/death"
+    ]
+  },
+
+  "entity.spiritcaller.intro": {
+    "subtitle": "subtitles.entity.spiritcaller.intro",
+    "sounds": [
+      "illageandspillage:spiritcaller/intro"
+    ]
+  },
+
+  "entity.spiritcaller.music_april": {
+    "sounds": [
+      "illageandspillage:spiritcaller/music_april"
+    ]
+  },
+
+  "entity.spiritcaller.music": {
+    "sounds": [
+      "illageandspillage:spiritcaller/music"
+    ]
+  },
+
+  "entity.spiritcaller.steal_spirits": {
+    "subtitle": "subtitles.entity.spiritcaller.steal_spirits",
+    "sounds": [
+      "illageandspillage:spiritcaller/steal_spirits"
+    ]
+  },
+
+  "entity.spiritcaller.spirit_absorb": {
+    "subtitle": "subtitles.entity.spiritcaller.spirit_absorb",
+    "sounds": [
+      "illageandspillage:spiritcaller/spirit_absorb"
+    ]
+  },
+
+  "entity.spiritcaller.spirit_swarm": {
+    "subtitle": "subtitles.entity.spiritcaller.spirit_swarm",
+    "sounds": [
+      "illageandspillage:spiritcaller/spiritswarm"
+    ]
+  },
+
+  "entity.spiritcaller.soul_scream": {
+    "subtitle": "subtitles.entity.spiritcaller.soul_scream",
+    "sounds": [
+      "illageandspillage:spiritcaller/spirit_scream1",
+      "illageandspillage:spiritcaller/spirit_scream2"
+    ]
+  },
+
+  "entity.spiritcaller.block_alert": {
+    "subtitle": "subtitles.entity.spiritcaller.block_alert",
+    "sounds": [
+      "illageandspillage:spiritcaller/block_alert"
+    ]
+  },
+
+  "entity.spiritcaller.earth_rumble": {
+    "subtitle": "subtitles.entity.spiritcaller.earth_rumble",
+    "sounds": [
+      "illageandspillage:spiritcaller/earthrumble"
+    ]
+  },
+
+  "entity.spiritcaller.imp_laugh": {
+    "subtitle": "subtitles.entity.spiritcaller.imp_laugh",
+    "sounds": [
+      "illageandspillage:spiritcaller/imp_laugh1",
+      "illageandspillage:spiritcaller/imp_laugh2"
+    ]
+  },
+
+  "entity.spiritcaller.death_animation": {
+    "subtitle": "subtitles.entity.spiritcaller.death_animation",
+    "sounds": [
+      "illageandspillage:spiritcaller/deathanimation"
+    ]
+  },
+
+  "entity.spiritcaller.descent": {
+    "subtitle": "subtitles.entity.spiritcaller.descent",
+    "sounds": [
+      "illageandspillage:spiritcaller/descent"
+    ]
+  },
+
+  "entity.spiritcaller.imprise": {
+    "subtitle": "subtitles.entity.spiritcaller.imprise",
+    "sounds": [
+      "illageandspillage:spiritcaller/imprise"
+    ]
+  },
+
+  "entity.spiritcaller.clap": {
+    "subtitle": "subtitles.entity.spiritcaller.clap",
+    "sounds": [
+      "illageandspillage:spiritcaller/clap"
+    ]
+  },
+
+  "entity.spiritcaller.spirit_hands": {
+    "subtitle": "subtitles.entity.spiritcaller.spirit_hands",
+    "sounds": [
+      "illageandspillage:spiritcaller/spirit_hands"
+    ]
+  },
+
+  "entity.spiritcaller.spirithand_warn": {
+    "subtitle": "subtitles.entity.spiritcaller.spirithand_warn",
+    "sounds": [
+      "illageandspillage:spiritcaller/spirithand_warn"
+    ]
+  },
+
+  "entity.spiritcaller.charge_laser": {
+    "subtitle": "subtitles.entity.spiritcaller.charge_laser",
+    "sounds": [
+      "illageandspillage:spiritcaller/charge_laser"
+    ]
+  },
+
+  "entity.spiritcaller.laser": {
+    "subtitle": "subtitles.entity.spiritcaller.laser",
+    "sounds": [
+      "illageandspillage:spiritcaller/laser"
+    ]
+  },
+
+  "entity.spiritcaller.anticheese": {
+    "subtitle": "subtitles.entity.spiritcaller.anticheese",
+    "sounds": [
+      "illageandspillage:spiritcaller/anticheese"
+    ]
+  },
+
+  "entity.mob_spirit.hurt": {
+    "subtitle": "subtitles.entity.mob_spirit.hurt",
+    "sounds": [
+      "illageandspillage:spiritcaller/mob_spirit/hurt1",
+      "illageandspillage:spiritcaller/mob_spirit/hurt2",
+      "illageandspillage:spiritcaller/mob_spirit/hurt3"
+    ]
+  },
+
+  "entity.mob_spirit.death": {
+    "subtitle": "subtitles.entity.mob_spirit.death",
+    "sounds": [
+      "illageandspillage:spiritcaller/mob_spirit/death"
+    ]
+  },
+
+  "entity.mob_spirit.hurt_corrupted": {
+    "subtitle": "subtitles.entity.mob_spirit.hurt",
+    "sounds": [
+      "illageandspillage:spiritcaller/mob_spirit/hurt1_corrupted",
+      "illageandspillage:spiritcaller/mob_spirit/hurt2_corrupted",
+      "illageandspillage:spiritcaller/mob_spirit/hurt3_corrupted"
+    ]
+  },
+
+  "entity.mob_spirit.death_corrupted": {
+    "subtitle": "subtitles.entity.mob_spirit.death",
+    "sounds": [
+      "illageandspillage:spiritcaller/mob_spirit/death_corrupted"
+    ]
+  },
+
+  "entity.boss_randomizer.ambient": {
+    "subtitle": "subtitles.entity.boss_randomizer.ambient",
+    "sounds": [
+      "illageandspillage:boss_randomizer/ambient1",
+      "illageandspillage:boss_randomizer/ambient2",
+      "illageandspillage:boss_randomizer/ambient3"
+    ]
+  },
+
+  "entity.boss_randomizer.hurt": {
+    "subtitle": "subtitles.entity.boss_randomizer.hurt",
+    "sounds": [
+      "illageandspillage:boss_randomizer/hurt1",
+      "illageandspillage:boss_randomizer/hurt2",
+      "illageandspillage:boss_randomizer/hurt3"
+    ]
+  },
+
+  "entity.boss_randomizer.death": {
+    "subtitle": "subtitles.entity.boss_randomizer.death",
+    "sounds": [
+      "illageandspillage:boss_randomizer/death"
+    ]
+  },
+
+  "entity.boss_randomizer.boss": {
+    "subtitle": "subtitles.entity.boss_randomizer.boss",
+    "sounds": [
+      "illageandspillage:boss_randomizer/boss"
+    ]
+  },
+
+  "entity.boss_randomizer.finalboss": {
+    "subtitle": "subtitles.entity.boss_randomizer.finalboss",
+    "sounds": [
+      "illageandspillage:boss_randomizer/finalboss"
+    ]
+  },
+
+  "entity.boss_randomizer.goofy": {
+    "subtitle": "subtitles.entity.boss_randomizer.goofy",
+    "sounds": [
+      "illageandspillage:boss_randomizer/goofy"
+    ]
+  },
+
+  "entity.crocofang.ambient": {
+    "subtitle": "subtitles.entity.crocofang.ambient",
+    "sounds": [
+      "illageandspillage:crocofang/ambient1",
+      "illageandspillage:crocofang/ambient2",
+      "illageandspillage:crocofang/ambient3"
+    ]
+  },
+
+  "entity.crocofang.bite": {
+    "subtitle": "subtitles.entity.crocofang.bite",
+    "sounds": [
+      "illageandspillage:crocofang/bite1",
+      "illageandspillage:crocofang/bite2",
+      "illageandspillage:crocofang/bite3"
+    ]
+  },
+
+  "entity.crocofang.hurt": {
+    "subtitle": "subtitles.entity.crocofang.hurt",
+    "sounds": [
+      "illageandspillage:crocofang/hurt1",
+      "illageandspillage:crocofang/hurt2",
+      "illageandspillage:crocofang/hurt3",
+      "illageandspillage:crocofang/hurt4"
+    ]
+  },
+
+  "entity.crocofang.death": {
+    "subtitle": "subtitles.entity.crocofang.death",
+    "sounds": [
+      "illageandspillage:crocofang/death1",
+      "illageandspillage:crocofang/death2"
+    ]
+  },
+
+  "entity.crocofang.prepare_charge": {
+    "subtitle": "subtitles.entity.crocofang.prepare_charge",
+    "sounds": [
+      "illageandspillage:crocofang/prepare_charge1",
+      "illageandspillage:crocofang/prepare_charge2",
+      "illageandspillage:crocofang/prepare_charge3"
+    ]
+  },
+
+  "entity.crocofang.charge": {
+    "subtitle": "subtitles.entity.crocofang.charge",
+    "sounds": [
+      "illageandspillage:crocofang/charge1",
+      "illageandspillage:crocofang/charge2",
+      "illageandspillage:crocofang/charge3"
+    ]
+  },
+
+  "entity.devastator.ravager_mutate": {
+    "subtitle": "subtitles.entity.devastator.ravager_mutate",
+    "sounds": [
+      "illageandspillage:devastator/ravager_mutate"
+    ]
+  },
+
+  "entity.devastator.intro_explosion": {
+    "subtitle": "subtitles.entity.devastator.intro_explosion",
+    "sounds": [
+      "illageandspillage:devastator/intro_explosion"
+    ]
+  },
+
+  "entity.devastator.slam_ground_intro": {
+    "subtitle": "subtitles.entity.devastator.slam_ground_intro",
+    "sounds": [
+      "illageandspillage:devastator/slam_ground_intro"
+    ]
+  },
+
+  "entity.devastator.intro_roar": {
+    "subtitle": "subtitles.entity.devastator.intro_roar",
+    "sounds": [
+      "illageandspillage:devastator/intro_roar"
+    ]
+  },
+
+  "entity.devastator.death": {
+    "subtitle": "subtitles.entity.devastator.death",
+    "sounds": [
+      "illageandspillage:devastator/death"
+    ]
+  },
+
+  "entity.devastator.death_ground": {
+    "subtitle": "subtitles.entity.devastator.death_ground",
+    "sounds": [
+      "illageandspillage:devastator/death_ground"
+    ]
+  },
+
+  "entity.devastator.prepare_wallcrash": {
+    "subtitle": "subtitles.entity.devastator.prepare_wallcrash",
+    "sounds": [
+      "illageandspillage:devastator/prepare_wallcrash"
+    ]
+  },
+
+  "entity.devastator.wallcrash": {
+    "subtitle": "subtitles.entity.devastator.wallcrash",
+    "sounds": [
+      "illageandspillage:devastator/wallcrash1",
+      "illageandspillage:devastator/wallcrash2"
+    ]
+  },
+
+  "entity.devastator.step": {
+    "subtitle": "subtitles.entity.devastator.step",
+    "sounds": [
+      "illageandspillage:devastator/step1",
+      "illageandspillage:devastator/step2",
+      "illageandspillage:devastator/step3",
+      "illageandspillage:devastator/step4"
+    ]
+  },
+
+  "entity.devastator.land": {
+    "subtitle": "subtitles.entity.devastator.land",
+    "sounds": [
+      "illageandspillage:devastator/land"
+    ]
+  },
+
+  "entity.absorber.ambient": {
+    "subtitle": "subtitles.entity.absorber.ambient",
+    "sounds": [
+      "illageandspillage:absorber/ambient1",
+      "illageandspillage:absorber/ambient2",
+      "illageandspillage:absorber/ambient3",
+      "illageandspillage:absorber/ambient4"
+    ]
+  },
+
+  "entity.absorber.hurt": {
+    "subtitle": "subtitles.entity.absorber.hurt",
+    "sounds": [
+      "illageandspillage:absorber/hurt1",
+      "illageandspillage:absorber/hurt2",
+      "illageandspillage:absorber/hurt3",
+      "illageandspillage:absorber/hurt4"
+    ]
+  },
+
+  "entity.absorber.death": {
+    "subtitle": "subtitles.entity.absorber.death",
+    "sounds": [
+      "illageandspillage:absorber/death1",
+      "illageandspillage:absorber/death2"
+    ]
+  },
+
+  "entity.absorber.attack": {
+    "subtitle": "subtitles.entity.absorber.attack",
+    "sounds": [
+      "illageandspillage:absorber/attack1",
+      "illageandspillage:absorber/attack2",
+      "illageandspillage:absorber/attack3"
+    ]
+  },
+
+  "entity.absorber.collapse": {
+    "subtitle": "subtitles.entity.absorber.collapse",
+    "sounds": [
+      "illageandspillage:absorber/collapse1",
+      "illageandspillage:absorber/collapse2"
+    ]
+  },
+
+  "entity.preserver.ambient": {
+    "subtitle": "subtitles.entity.preserver.ambient",
+    "sounds": [
+      "illageandspillage:preserver/ambient1",
+      "illageandspillage:preserver/ambient2",
+      "illageandspillage:preserver/ambient3"
+    ]
+  },
+
+  "entity.preserver.hurt": {
+    "subtitle": "subtitles.entity.preserver.hurt",
+    "sounds": [
+      "illageandspillage:preserver/hurt1",
+      "illageandspillage:preserver/hurt2",
+      "illageandspillage:preserver/hurt3",
+      "illageandspillage:preserver/hurt4",
+      "illageandspillage:preserver/hurt5"
+    ]
+  },
+
+  "entity.preserver.death": {
+    "subtitle": "subtitles.entity.preserver.death",
+    "sounds": [
+      "illageandspillage:preserver/death1",
+      "illageandspillage:preserver/death2"
+    ]
+  },
+
+  "entity.preserver.jump": {
+    "subtitle": "subtitles.entity.preserver.jump",
+    "sounds": [
+      "illageandspillage:preserver/jump1",
+      "illageandspillage:preserver/jump2",
+      "illageandspillage:preserver/jump3"
+    ]
+  },
+
+  "entity.preserver.land": {
+    "subtitle": "subtitles.entity.preserver.land",
+    "sounds": [
+      "illageandspillage:preserver/land1",
+      "illageandspillage:preserver/land2",
+      "illageandspillage:preserver/land3",
+      "illageandspillage:preserver/land4"
+    ]
+  },
+
+  "entity.freakager.ambient": {
+    "subtitle": "subtitles.entity.freakager.ambient",
+    "sounds": [
+      "illageandspillage:freakager/ambient1",
+      "illageandspillage:freakager/ambient2",
+      "illageandspillage:freakager/ambient3"
+    ]
+  },
+
+  "entity.freakager.hurt": {
+    "subtitle": "subtitles.entity.freakager.hurt",
+    "sounds": [
+      "illageandspillage:freakager/hurt1",
+      "illageandspillage:freakager/hurt2",
+      "illageandspillage:freakager/hurt3"
+    ]
+  },
+
+  "entity.freakager.death": {
+    "subtitle": "subtitles.entity.freakager.death",
+    "sounds": [
+      "illageandspillage:freakager/death"
+    ]
+  },
+
+  "entity.freakager.reveal": {
+    "subtitle": "subtitles.entity.freakager.reveal",
+    "sounds": [
+      "illageandspillage:freakager/reveal1",
+      "illageandspillage:freakager/reveal2"
+    ]
+  },
+
+  "entity.freakager.skid": {
+    "subtitle": "subtitles.entity.freakager.skid",
+    "sounds": [
+      "illageandspillage:freakager/skid"
+    ]
+  },
+
+  "entity.freakager.villager_wave": {
+    "subtitle": "subtitles.entity.freakager.villager_wave",
+    "sounds": [
+      "illageandspillage:freakager/villager_wave1",
+      "illageandspillage:freakager/villager_wave2",
+      "illageandspillage:freakager/villager_wave3"
+    ]
+  },
+
+  "entity.freakager.villager_sigh": {
+    "subtitle": "subtitles.entity.freakager.villager_sigh",
+    "sounds": [
+      "illageandspillage:freakager/villager_sigh"
+    ]
+  },
+
+  "entity.freakager.force_potion": {
+    "subtitle": "subtitles.entity.freakager.force_potion",
+    "sounds": [
+      "illageandspillage:freakager/force_potion"
+    ]
+  },
+
+  "entity.freakager.axe_draw": {
+    "subtitle": "subtitles.entity.freakager.axe_draw",
+    "sounds": [
+      "illageandspillage:freakager/axe_draw"
+    ]
+  },
+
+  "entity.freakager.throw": {
+    "subtitle": "subtitles.entity.freakager.throw",
+    "sounds": [
+      "illageandspillage:freakager/throw1",
+      "illageandspillage:freakager/throw2",
+      "illageandspillage:freakager/throw3"
+    ]
+  },
+
+  "entity.freakager.pumpkinbombs": {
+    "subtitle": "subtitles.entity.freakager.pumpkinbombs",
+    "sounds": [
+      "illageandspillage:freakager/pumpkinbombs"
+    ]
+  },
+
+  "entity.freakager.minions": {
+    "subtitle": "subtitles.entity.freakager.minions",
+    "sounds": [
+      "illageandspillage:freakager/minions"
+    ]
+  },
+
+  "entity.freakager.angry_axes": {
+    "subtitle": "subtitles.entity.freakager.angry_axes",
+    "sounds": [
+      "illageandspillage:freakager/angry_axes1",
+      "illageandspillage:freakager/angry_axes2"
+    ]
+  },
+
+  "entity.freakager.laugh": {
+    "subtitle": "subtitles.entity.freakager.laugh",
+    "sounds": [
+      "illageandspillage:freakager/laugh"
+    ]
+  },
+
+  "entity.freakager.music": {
+    "sounds": [
+      "illageandspillage:freakager/music"
+    ]
+  },
+
+  "entity.freakager.villager_panic": {
+    "subtitle": "subtitles.entity.freakager.villager_panic",
+    "sounds": [
+      "illageandspillage:freakager/villager_panic1",
+      "illageandspillage:freakager/villager_panic2",
+      "illageandspillage:freakager/villager_panic3",
+      "illageandspillage:freakager/villager_panic4"
+    ]
+  },
+
+  "entity.freakager.shiver": {
+    "subtitle": "subtitles.entity.freakager.shiver",
+    "sounds": [
+      "illageandspillage:freakager/shiver"
+    ]
+  },
+
+  "entity.freakager.cymbal": {
+    "subtitle": "subtitles.entity.freakager.cymbal",
+    "sounds": [
+      "illageandspillage:freakager/cymbal"
+    ]
+  },
+
+  "entity.freakager.skullbomb_explode": {
+    "subtitle": "subtitles.entity.freakager.skullbomb_explode",
+    "sounds": [
+      "illageandspillage:freakager/skullbomb_explode"
+    ]
+  },
+
+  "entity.freakager.pumpkinbomb_explode": {
+    "subtitle": "subtitles.entity.freakager.pumpkinbomb_explode",
+    "sounds": [
+      "illageandspillage:freakager/pumpkinbomb_explode"
+    ]
+  },
+
+  "entity.freakager.villager_hiss": {
+    "subtitle": "subtitles.entity.freakager.villager_hiss",
+    "sounds": [
+      "illageandspillage:freakager/villagerexplode"
+    ]
+  },
+
+  "entity.freakager.pumpkinbomb_boing": {
+    "subtitle": "subtitles.entity.freakager.pumpkinbomb_boing",
+    "sounds": [
+      "illageandspillage:freakager/pumpkinbomb_boing"
+    ]
+  },
+
+  "entity.freakager.spin": {
+    "subtitle": "subtitles.entity.freakager.spin",
+    "sounds": [
+      "illageandspillage:freakager/spin"
+    ]
+  },
+
+  "entity.freakager.scythe_spin": {
+    "subtitle": "subtitles.entity.freakager.scythe_spin",
+    "sounds": [
+      "illageandspillage:freakager/scythe_spin"
+    ]
+  },
+
+  "entity.freakager.scythe_catch": {
+    "subtitle": "subtitles.entity.freakager.scythe_catch",
+    "sounds": [
+      "illageandspillage:freakager/catch"
+    ]
+  },
+
+  "entity.freakager.trickortreat_destroy": {
+    "subtitle": "subtitles.entity.freakager.trickortreat_destroy",
+    "sounds": [
+      "illageandspillage:freakager/trickortreat_destroy"
+    ]
+  },
+
+  "entity.freakager.trickortreat": {
+    "subtitle": "subtitles.entity.freakager.trickortreat",
+    "sounds": [
+      "illageandspillage:freakager/trickortreat"
+    ]
+  },
+
+  "entity.freakager.trickortreat_bounce": {
+    "subtitle": "subtitles.entity.freakager.trickortreat_bounce",
+    "sounds": [
+      "illageandspillage:freakager/trickortreat_bounce"
+    ]
+  },
+
+  "entity.freakager.funnybone_ambient": {
+    "subtitle": "subtitles.entity.freakager.funnybone_ambient",
+    "sounds": [
+      "illageandspillage:freakager/funnybone/ambient1",
+      "illageandspillage:freakager/funnybone/ambient2",
+      "illageandspillage:freakager/funnybone/ambient3",
+      "illageandspillage:freakager/funnybone/ambient4",
+      "illageandspillage:freakager/funnybone/ambient5"
+    ]
+  },
+
+  "entity.freakager.funnybone_hurt": {
+    "subtitle": "subtitles.entity.freakager.funnybone_hurt",
+    "sounds": [
+      "illageandspillage:freakager/funnybone/hurt1",
+      "illageandspillage:freakager/funnybone/hurt2",
+      "illageandspillage:freakager/funnybone/hurt3",
+      "illageandspillage:freakager/funnybone/hurt4"
+    ]
+  },
+
+  "entity.freakager.funnybone_death": {
+    "subtitle": "subtitles.entity.freakager.funnybone_death",
+    "sounds": [
+      "illageandspillage:freakager/funnybone/death1",
+      "illageandspillage:freakager/funnybone/death2"
+    ]
+  },
+
+  "entity.freakager.funnybone_throw": {
+    "subtitle": "subtitles.entity.freakager.funnybone_throw",
+    "sounds": [
+      "illageandspillage:freakager/funnybone/throw1",
+      "illageandspillage:freakager/funnybone/throw2"
+    ]
+  },
+
+  "entity.freakager.eyesore_ambient": {
+    "subtitle": "subtitles.entity.freakager.eyesore_ambient",
+    "sounds": [
+      "illageandspillage:freakager/eyesore/ambient1",
+      "illageandspillage:freakager/eyesore/ambient2",
+      "illageandspillage:freakager/eyesore/ambient3",
+      "illageandspillage:freakager/eyesore/ambient4"
+    ]
+  },
+
+  "entity.freakager.eyesore_hurt": {
+    "subtitle": "subtitles.entity.freakager.eyesore_hurt",
+    "sounds": [
+      "illageandspillage:freakager/eyesore/hurt1",
+      "illageandspillage:freakager/eyesore/hurt2",
+      "illageandspillage:freakager/eyesore/hurt3"
+    ]
+  },
+
+  "entity.freakager.eyesore_death": {
+    "subtitle": "subtitles.entity.freakager.eyesore_death",
+    "sounds": [
+      "illageandspillage:freakager/eyesore/death1",
+      "illageandspillage:freakager/eyesore/death2"
+    ]
+  },
+
+  "entity.freakager.eyesore_land": {
+    "subtitle": "subtitles.entity.freakager.eyesore_land",
+    "sounds": [
+      "illageandspillage:freakager/eyesore/land1",
+      "illageandspillage:freakager/eyesore/land2",
+      "illageandspillage:freakager/eyesore/land3",
+      "illageandspillage:freakager/eyesore/land4"
+    ]
+  },
+
+  "entity.ragno.trans": {
+    "sounds": [
+      "illageandspillage:freakager/ragno/music_trans"
+    ]
+  },
+
+  "entity.ragno.music": {
+    "sounds": [
+      "illageandspillage:freakager/ragno/music"
+    ]
+  },
+
+  "entity.ragno.ambient": {
+    "subtitle": "subtitles.entity.ragno.ambient",
+    "sounds": [
+      "illageandspillage:freakager/ragno/ambient1",
+      "illageandspillage:freakager/ragno/ambient2"
+    ]
+  },
+
+  "entity.ragno.hurt": {
+    "subtitle": "subtitles.entity.ragno.hurt",
+    "sounds": [
+      "illageandspillage:freakager/ragno/hurt1",
+      "illageandspillage:freakager/ragno/hurt2",
+      "illageandspillage:freakager/ragno/hurt3"
+    ]
+  },
+
+  "entity.ragno.death": {
+    "subtitle": "subtitles.entity.ragno.death",
+    "sounds": [
+      "illageandspillage:freakager/ragno/death"
+    ]
+  },
+
+  "entity.ragno.crawl": {
+    "subtitle": "subtitles.entity.ragno.crawl",
+    "sounds": [
+      "illageandspillage:freakager/ragno/crawl1",
+      "illageandspillage:freakager/ragno/crawl2",
+      "illageandspillage:freakager/ragno/crawl3",
+      "illageandspillage:freakager/ragno/crawl4"
+    ]
+  },
+
+  "entity.ragno.block": {
+    "subtitle": "subtitles.entity.ragno.block",
+    "sounds": [
+      "illageandspillage:freakager/ragno/block"
+    ]
+  },
+
+  "entity.ragno.prepare_charge": {
+    "subtitle": "subtitles.entity.ragno.prepare_charge",
+    "sounds": [
+      "illageandspillage:freakager/ragno/prepare_charge"
+    ]
+  },
+
+  "entity.ragno.leap": {
+    "subtitle": "subtitles.entity.ragno.leap",
+    "sounds": [
+      "illageandspillage:freakager/ragno/leap"
+    ]
+  },
+
+  "entity.ragno.roar": {
+    "subtitle": "subtitles.entity.ragno.roar",
+    "sounds": [
+      "illageandspillage:freakager/ragno/roar"
+    ]
+  },
+
+  "entity.ragno.web": {
+    "subtitle": "subtitles.entity.ragno.web",
+    "sounds": [
+      "illageandspillage:freakager/ragno/web1",
+      "illageandspillage:freakager/ragno/web2"
+    ]
+  },
+
+  "entity.ragno.spawn": {
+    "subtitle": "subtitles.entity.ragno.spawn",
+    "sounds": [
+      "illageandspillage:freakager/ragno/spawn"
+    ]
+  },
+
+  "entity.ragno.screech": {
+    "subtitle": "subtitles.entity.ragno.screech",
+    "sounds": [
+      "illageandspillage:freakager/ragno/screech"
+    ]
+  },
+
+  "entity.ragno.jumpscare": {
+    "subtitle": "subtitles.entity.ragno.jumpscare",
+    "sounds": [
+      "illageandspillage:freakager/ragno/jumpscare"
+    ]
+  },
+
+  "entity.ragno.eat": {
+    "subtitle": "subtitles.entity.ragno.eat",
+    "sounds": [
+      "illageandspillage:freakager/ragno/eat"
+    ]
+  },
+
+  "entity.ragno.slam": {
+    "subtitle": "subtitles.entity.ragno.slam",
+    "sounds": [
+      "illageandspillage:freakager/ragno/slam"
+    ]
+  },
+
+  "entity.ragno.web_hit": {
+    "subtitle": "subtitles.entity.ragno.web_hit",
+    "sounds": [
+      "illageandspillage:freakager/ragno/web_hit1",
+      "illageandspillage:freakager/ragno/web_hit2",
+      "illageandspillage:freakager/ragno/web_hit3"
+    ]
+  },
+
+  "entity.ragno.charge": {
+    "subtitle": "subtitles.entity.ragno.charge",
+    "sounds": [
+      "illageandspillage:freakager/ragno/screech"
+    ]
+  },
+
+  "entity.ragno.stun": {
+    "subtitle": "subtitles.entity.ragno.stun",
+    "sounds": [
+      "illageandspillage:freakager/ragno/stun"
+    ]
+  },
+
+  "entity.ragno.cough": {
+    "subtitle": "subtitles.entity.ragno.cough",
+    "sounds": [
+      "illageandspillage:freakager/ragno/cough"
+    ]
+  },
+
+  "item.totem_of_banishment.banish": {
+    "subtitle": "subtitles.item.totem_of_banishment.banish",
+    "sounds": [
+      "illageandspillage:banish"
+    ]
+  },
+
+  "item.spellbound_book.use": {
+    "subtitle": "subtitles.item.spellbound_book.use",
+    "sounds": [
+      "illageandspillage:spellbound_book_use"
+    ]
+  },
+
+  "item.magi_disc.music": {
+    "subtitle": "subtitles.item.disc.music",
+    "sounds": [
+      {
+        "category": "record",
+        "stream": true,
+        "name": "illageandspillage:disc/magi_disc"
+      }
+    ]
+  },
+
+  "item.spiri_disc.music": {
+    "subtitle": "subtitles.item.disc.music",
+    "sounds": [
+      {
+        "category": "record",
+        "stream": true,
+        "name": "illageandspillage:disc/spiri_disc"
+      }
+    ]
+  },
+
+  "item.freaky_disc.music": {
+    "subtitle": "subtitles.item.disc.music",
+    "sounds": [
+      {
+        "category": "record",
+        "stream": true,
+        "name": "illageandspillage:disc/freaky_disc"
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "display": {
+    "icon": {
+      "item": "illageandspillage:spellbound_book"
+    },
+    "title": {
+      "translate": "advancements.illageandspillage.spiri_advancement"
+    },
+    "description": {
+      "translate": "advancements.illageandspillage.spiri_advancement_desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "minecraft:adventure/voluntary_exile",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "illageandspillage:spiritcaller"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 50
+  }
+}

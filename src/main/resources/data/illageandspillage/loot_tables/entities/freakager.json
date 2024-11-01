@@ -1,0 +1,20 @@
+{
+  "pools": [
+    {
+      "name": "freakager",
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "killed_by_player"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "illageandspillage:bag_of_horrors",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

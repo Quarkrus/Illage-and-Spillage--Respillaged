@@ -92,10 +92,10 @@ public class VillagerSoulEntity extends PathfinderMob {
             if (this.distanceToSqr(this.getTarget()) < 4.0) {
                 this.playSound(IllageAndSpillageSoundEvents.ENTITY_RAGNO_JUMPSCARE.get(), 3.0F, this.getVoicePitch());
                 CameraShakeEntity.cameraShake(this.level(), this.position(), 50.0F, 0.2F, 0, 40);
-                this.getTarget().addEffect(new MobEffectInstance(MobEffects.DARKNESS, 80, 0));
+                this.getTarget().addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 60, 0));
 
                 if (this.getTarget() instanceof ServerPlayer player) {
-                    PacketHandler.CHANNEL.send(PacketDistributor.PLAYER.with(() -> player), new JumpscareSyncPacket(IllageAndSpillageConfig.doJumpscare.get()));
+                    PacketHandler.CHANNEL.send(PacketDistributor.PLAYER.with(() -> player), new JumpscareSyncPacket());
                 }
 
                 this.discard();

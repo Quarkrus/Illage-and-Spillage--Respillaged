@@ -21,10 +21,10 @@ public class NightmareEvents {
         if (IllageAndSpillageConfig.nightmare_mode.get() && (attacker instanceof MagispellerEntity || attacker instanceof FakeMagispellerEntity || attacker instanceof IllashooterEntity || attacker instanceof CrashagerEntity || attacker instanceof KaboomerEntity)) {
             event.setAmount((float) (event.getAmount() * IllageAndSpillageConfig.magi_damage_multiplier.get()));
         }
-        if (IllageAndSpillageConfig.nightmare_mode.get() && (attacker instanceof FreakagerEntity || attacker instanceof EyesoreEntity || attacker instanceof FunnyboneEntity)) {
+        if (IllageAndSpillageConfig.nightmare_mode.get() && (attacker instanceof FreakagerEntity || attacker instanceof OldFreakagerEntity || attacker instanceof EyesoreEntity || attacker instanceof FunnyboneEntity)) {
             event.setAmount((float) (event.getAmount() * IllageAndSpillageConfig.freaky_damage_multiplier.get()));
         }
-        if (IllageAndSpillageConfig.nightmare_mode.get() && attacker instanceof RagnoEntity) {
+        if (IllageAndSpillageConfig.nightmare_mode.get() && (attacker instanceof RagnoEntity || attacker instanceof OldRagnoEntity)) {
             event.setAmount((float) (event.getAmount() * (IllageAndSpillageConfig.ragno_damage_multiplier.get())));
         }
         if (IllageAndSpillageConfig.nightmare_mode.get() && (attacker instanceof SpiritcallerEntity || attacker instanceof MobSpiritEntity || attacker instanceof IllagerSoulEntity)) {

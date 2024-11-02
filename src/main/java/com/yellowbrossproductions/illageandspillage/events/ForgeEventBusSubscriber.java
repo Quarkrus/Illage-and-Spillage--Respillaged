@@ -77,6 +77,8 @@ public class ForgeEventBusSubscriber {
             ((PathfinderMob) entity).goalSelector.addGoal(0, new AvoidEntityGoal<>((PathfinderMob) entity, AbsorberEntity.class, 8.0F, runSpeed, runSpeed));
             ((PathfinderMob) entity).goalSelector.addGoal(0, new AvoidEntityGoal<>((PathfinderMob) entity, FreakagerEntity.class, 8.0F, runSpeed, runSpeed));
             ((PathfinderMob) entity).goalSelector.addGoal(0, new AvoidEntityGoal<>((PathfinderMob) entity, RagnoEntity.class, 8.0F, runSpeed, runSpeed));
+            ((PathfinderMob) entity).goalSelector.addGoal(0, new AvoidEntityGoal<>((PathfinderMob) entity, OldFreakagerEntity.class, 8.0F, runSpeed, runSpeed));
+            ((PathfinderMob) entity).goalSelector.addGoal(0, new AvoidEntityGoal<>((PathfinderMob) entity, OldRagnoEntity.class, 8.0F, runSpeed, runSpeed));
             ((PathfinderMob) entity).goalSelector.addGoal(0, new AvoidEntityGoal<>((PathfinderMob) entity, PumpkinBombEntity.class, 4.0F, runSpeed, runSpeed));
             ((PathfinderMob) entity).goalSelector.addGoal(0, new AvoidEntityGoal<>((PathfinderMob) entity, FunnyboneEntity.class, 8.0F, runSpeed, runSpeed));
             ((PathfinderMob) entity).goalSelector.addGoal(0, new AvoidEntityGoal<>((PathfinderMob) entity, MagispellerEntity.class, 8.0F, runSpeed, runSpeed));

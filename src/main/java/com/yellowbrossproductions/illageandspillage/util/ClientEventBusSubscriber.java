@@ -6,6 +6,11 @@ import com.yellowbrossproductions.illageandspillage.client.render.layer.WebbedLa
 import com.yellowbrossproductions.illageandspillage.gui.overlay.JumpscareOverlay;
 import com.yellowbrossproductions.illageandspillage.gui.overlay.WebbedOverlay;
 import com.yellowbrossproductions.illageandspillage.init.ModEntityTypes;
+import com.yellowbrossproductions.illageandspillage.particle.ParticleRegisterer;
+import com.yellowbrossproductions.illageandspillage.particle.custom.BloodParticles;
+import com.yellowbrossproductions.illageandspillage.particle.custom.MutationDripParticles;
+import com.yellowbrossproductions.illageandspillage.particle.custom.MutationParticles;
+import com.yellowbrossproductions.illageandspillage.particle.custom.MutationParticles2;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.renderer.entity.LivingEntityRenderer;
@@ -15,6 +20,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.client.event.RegisterGuiOverlaysEvent;
+import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.client.gui.overlay.VanillaGuiOverlay;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -44,6 +50,14 @@ public class ClientEventBusSubscriber {
         event.registerAbove(VanillaGuiOverlay.PORTAL.id(), "jumpscare", (forgeGui, guiGraphics, partialTicks, screenWidth, screenHeight) -> {
             JumpscareOverlay.JUMPSCARE_OVERLAY.render(guiGraphics, partialTicks, screenWidth, screenHeight);
         });
+    }
+
+    @SubscribeEvent
+    public static void registerParticleFactories(final RegisterParticleProvidersEvent event) {
+        Minecraft.getInstance().particleEngine.register(ParticleRegisterer.MUTATION_PARTICLES.get(), MutationParticles.Provider::new);
+        Minecraft.getInstance().particleEngine.register(ParticleRegisterer.MUTATION_PARTICLES2.get(), MutationParticles2.Provider::new);
+        Minecraft.getInstance().particleEngine.register(ParticleRegisterer.MUTATION_DRIP_PARTICLES.get(), MutationDripParticles.Provider::new);
+        Minecraft.getInstance().particleEngine.register(ParticleRegisterer.BLOOD_PARTICLES.get(), BloodParticles.Provider::new);
     }
 
     @SubscribeEvent
@@ -79,6 +93,8 @@ public class ClientEventBusSubscriber {
         event.registerLayerDefinition(FunnyboneModel.LAYER_LOCATION, FunnyboneModel::createBodyLayer);
         event.registerLayerDefinition(BoneModel.LAYER_LOCATION, BoneModel::createBodyLayer);
         event.registerLayerDefinition(SkullBombModel.LAYER_LOCATION, SkullBombModel::createBodyLayer);
+        event.registerLayerDefinition(OldFreakagerModel.LAYER_LOCATION, OldFreakagerModel::createBodyLayer);
+        event.registerLayerDefinition(OldRagnoModel.LAYER_LOCATION, OldRagnoModel::createBodyLayer);
         event.registerLayerDefinition(OldMagispellerModel.LAYER_LOCATION, OldMagispellerModel::createBodyLayer);
         event.registerLayerDefinition(MagiHealModel.LAYER_LOCATION, MagiHealModel::createBodyLayer);
         event.registerLayerDefinition(KaboomerModel.LAYER_LOCATION, KaboomerModel::createBodyLayer);
@@ -126,6 +142,8 @@ public class ClientEventBusSubscriber {
         event.registerEntityRenderer(ModEntityTypes.Funnybone.get(), FunnyboneRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.Bone.get(), BoneRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.SkullBomb.get(), SkullBombRenderer::new);
+        event.registerEntityRenderer(ModEntityTypes.OldFreakager.get(), OldFreakagerRenderer::new);
+        event.registerEntityRenderer(ModEntityTypes.OldRagno.get(), OldRagnoRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.OldMagispeller.get(), OldMagispellerRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.MagiFireball.get(), MagiFireballRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.MagiArrow.get(), MagiArrowRenderer::new);
@@ -133,6 +151,7 @@ public class ClientEventBusSubscriber {
         event.registerEntityRenderer(ModEntityTypes.Kaboomer.get(), KaboomerRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.PumpkinBomb.get(), PumpkinBombRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.Axe.get(), AxeRenderer::new);
+        event.registerEntityRenderer(ModEntityTypes.OldAxe.get(), OldAxeRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.DarkPotion.get(), (p_174064_) -> new ThrownItemRenderer<>(p_174064_, 0.75F, true));
         event.registerEntityRenderer(ModEntityTypes.Scythe.get(), ScytheRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.TrickOrTreat.get(), TrickOrTreatRenderer::new);

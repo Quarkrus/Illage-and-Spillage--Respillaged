@@ -2,19 +2,22 @@ package com.yellowbrossproductions.illageandspillage.gui.overlay;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.*;
+import com.yellowbrossproductions.illageandspillage.config.IllageAndSpillageConfig;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.renderer.Rect2i;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 import java.util.Random;
 
-@Mod.EventBusSubscriber(value = Dist.CLIENT, modid = "illageandspillage", bus = Mod.EventBusSubscriber.Bus.FORGE)
+@OnlyIn(Dist.CLIENT)
+@Mod.EventBusSubscriber(modid = "illageandspillage", bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class JumpscareOverlay {
     private static final ResourceLocation TEXTURE = new ResourceLocation("illageandspillage", "textures/entity/freakager/jumpscare1.png");
     private static final ResourceLocation TEXTURE_OUTLINE = new ResourceLocation("illageandspillage", "textures/entity/freakager/jumpscare2.png");
@@ -56,7 +59,7 @@ public class JumpscareOverlay {
     }
 
     public void render(GuiGraphics guiGraphics, float partialTicks, int screenWidth, int screenHeight) {
-        if (!visible) return;
+        if (!visible || !IllageAndSpillageConfig.doJumpscare.get()) return;
 
         float time = progress + partialTicks;
         if (time >= ANIMATION_TOTAL) {

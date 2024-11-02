@@ -1,6 +1,7 @@
 package com.yellowbrossproductions.illageandspillage.client.sound;
 
 import com.yellowbrossproductions.illageandspillage.client.tool.ControlledAnimation;
+import com.yellowbrossproductions.illageandspillage.entities.OldRagnoEntity;
 import com.yellowbrossproductions.illageandspillage.entities.RagnoEntity;
 import com.yellowbrossproductions.illageandspillage.util.IllageAndSpillageSoundEvents;
 import net.minecraft.client.Minecraft;
@@ -58,6 +59,13 @@ public class BossMusicSound extends AbstractTickableSoundInstance {
             this.stop();
             BossMusicPlayer.bossMusic = null;
             BossMusicSound newMusic = new BossMusicSound(((RagnoEntity) boss).getBossMusic(), boss);
+            Minecraft.getInstance().getSoundManager().play(newMusic);
+            BossMusicPlayer.bossMusic = newMusic;
+            return;
+        } else if (boss instanceof OldRagnoEntity && soundEvent == IllageAndSpillageSoundEvents.ENTITY_RAGNO_TRANS.get() && this.ticksExisted >= 2831) {
+            this.stop();
+            BossMusicPlayer.bossMusic = null;
+            BossMusicSound newMusic = new BossMusicSound(((OldRagnoEntity) boss).getBossMusic(), boss);
             Minecraft.getInstance().getSoundManager().play(newMusic);
             BossMusicPlayer.bossMusic = newMusic;
             return;

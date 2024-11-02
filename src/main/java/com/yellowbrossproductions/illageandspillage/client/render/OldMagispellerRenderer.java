@@ -2,8 +2,8 @@ package com.yellowbrossproductions.illageandspillage.client.render;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.yellowbrossproductions.illageandspillage.client.model.OldMagispellerModel;
-import com.yellowbrossproductions.illageandspillage.client.render.layer.oldmagispeller.OldMagispellerArmorLayer;
-import com.yellowbrossproductions.illageandspillage.client.render.layer.oldmagispeller.OldMagispellerFakerLayer;
+import com.yellowbrossproductions.illageandspillage.client.render.layer.old_magispeller.OldMagispellerArmorLayer;
+import com.yellowbrossproductions.illageandspillage.client.render.layer.old_magispeller.OldMagispellerFakerLayer;
 import com.yellowbrossproductions.illageandspillage.entities.OldMagispellerEntity;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;

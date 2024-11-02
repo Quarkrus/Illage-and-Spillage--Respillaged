@@ -1,4 +1,4 @@
-package com.yellowbrossproductions.illageandspillage.client.render.layer.oldmagispeller;
+package com.yellowbrossproductions.illageandspillage.client.render.layer.old_magispeller;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.yellowbrossproductions.illageandspillage.client.model.OldMagispellerModel;

@@ -3,6 +3,7 @@ package com.yellowbrossproductions.illageandspillage.util;
 import com.yellowbrossproductions.illageandspillage.capability.WebbedProvider;
 import com.yellowbrossproductions.illageandspillage.entities.IllagerAttack;
 import com.yellowbrossproductions.illageandspillage.entities.ImpEntity;
+import com.yellowbrossproductions.illageandspillage.entities.TrickOrTreatEntity;
 import com.yellowbrossproductions.illageandspillage.entities.projectile.AxeEntity;
 import com.yellowbrossproductions.illageandspillage.entities.projectile.BoneEntity;
 import com.yellowbrossproductions.illageandspillage.init.ModEntityTypes;
@@ -39,9 +40,9 @@ public class EntityUtil {
     }
 
     public static boolean canHurtThisMob(Entity target, Mob attacker) {
-        if ((attacker.getTeam() != null || target.getTeam() != null) && !(target instanceof IllagerAttack) && !(target instanceof AxeEntity) && !(target instanceof BoneEntity)) {
+        if ((attacker.getTeam() != null || target.getTeam() != null) && (!(target instanceof IllagerAttack) || (target instanceof TrickOrTreatEntity && ((TrickOrTreatEntity) target).isOld())) && !(target instanceof AxeEntity) && !(target instanceof BoneEntity)) {
             return attacker.getTeam() != target.getTeam();
-        } else if (!(target instanceof Raider) && !(target instanceof IllagerAttack) && !(target instanceof AxeEntity) && !(target instanceof BoneEntity)) {
+        } else if (((!(target instanceof Raider) && !(target instanceof IllagerAttack)) || (target instanceof TrickOrTreatEntity && ((TrickOrTreatEntity) target).isOld())) && !(target instanceof AxeEntity) && !(target instanceof BoneEntity)) {
             return true;
         } else {
             return attacker.getTarget() == target;

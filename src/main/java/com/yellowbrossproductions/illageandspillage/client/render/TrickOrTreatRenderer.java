@@ -13,6 +13,8 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 public class TrickOrTreatRenderer extends MobRenderer<TrickOrTreatEntity, TrickOrTreatModel<TrickOrTreatEntity>> {
     private static final ResourceLocation TEXTURE = new ResourceLocation("illageandspillage", "textures/entity/freakager/trickortreat.png");
     private static final ResourceLocation GOOPY = new ResourceLocation("illageandspillage", "textures/entity/freakager/trickortreat_ragno.png");
+    private static final ResourceLocation OLD = new ResourceLocation("illageandspillage", "textures/entity/freakager/old/trickortreat.png");
+    private static final ResourceLocation GOOPY_OLD = new ResourceLocation("illageandspillage", "textures/entity/freakager/old/trickortreat_ragno.png");
 
     public TrickOrTreatRenderer(EntityRendererProvider.Context renderManagerIn) {
         super(renderManagerIn, new TrickOrTreatModel<>(renderManagerIn.bakeLayer(TrickOrTreatModel.LAYER_LOCATION)), 0.6F);
@@ -27,6 +29,6 @@ public class TrickOrTreatRenderer extends MobRenderer<TrickOrTreatEntity, TrickO
     }
 
     public ResourceLocation getTextureLocation(TrickOrTreatEntity p_110775_1_) {
-        return p_110775_1_.getGoopy() ? GOOPY : TEXTURE;
+        return p_110775_1_.isOld() ? p_110775_1_.getGoopy() ? GOOPY_OLD : OLD : p_110775_1_.getGoopy() ? GOOPY : TEXTURE;
     }
 }

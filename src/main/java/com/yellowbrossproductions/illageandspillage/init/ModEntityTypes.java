@@ -47,6 +47,8 @@ public class ModEntityTypes {
     public static final RegistryObject<EntityType<FunnyboneEntity>> Funnybone;
     public static final RegistryObject<EntityType<BoneEntity>> Bone;
     public static final RegistryObject<EntityType<SkullBombEntity>> SkullBomb;
+    public static final RegistryObject<EntityType<OldFreakagerEntity>> OldFreakager;
+    public static final RegistryObject<EntityType<OldRagnoEntity>> OldRagno;
     public static final RegistryObject<EntityType<OldMagispellerEntity>> OldMagispeller;
     public static final RegistryObject<EntityType<MagiFireballEntity>> MagiFireball;
     public static final RegistryObject<EntityType<MagiArrowEntity>> MagiArrow;
@@ -54,6 +56,7 @@ public class ModEntityTypes {
     public static final RegistryObject<EntityType<KaboomerEntity>> Kaboomer;
     public static final RegistryObject<EntityType<PumpkinBombEntity>> PumpkinBomb;
     public static final RegistryObject<EntityType<AxeEntity>> Axe;
+    public static final RegistryObject<EntityType<OldAxeEntity>> OldAxe;
     public static final RegistryObject<EntityType<DarkPotionEntity>> DarkPotion;
     public static final RegistryObject<EntityType<ScytheEntity>> Scythe;
     public static final RegistryObject<EntityType<TrickOrTreatEntity>> TrickOrTreat;
@@ -92,10 +95,13 @@ public class ModEntityTypes {
         event.put(Eyesore.get(), EyesoreEntity.createAttributes().build());
         event.put(Funnybone.get(), FunnyboneEntity.createAttributes().build());
         event.put(SkullBomb.get(), SkullBombEntity.createAttributes().build());
+        event.put(OldFreakager.get(), OldFreakagerEntity.createAttributes().build());
+        event.put(OldRagno.get(), OldRagnoEntity.createAttributes().build());
         event.put(OldMagispeller.get(), OldMagispellerEntity.createAttributes().build());
         event.put(MagiHeal.get(), MagiHealEntity.createAttributes().build());
         event.put(Kaboomer.get(), KaboomerEntity.createAttributes().build());
         event.put(PumpkinBomb.get(), PumpkinBombEntity.createAttributes().build());
+        event.put(OldAxe.get(), OldAxeEntity.createAttributes().build());
         event.put(Scythe.get(), ScytheEntity.createAttributes().build());
         event.put(TrickOrTreat.get(), TrickOrTreatEntity.createAttributes().build());
         event.put(Web.get(), WebEntity.createAttributes().build());
@@ -141,6 +147,8 @@ public class ModEntityTypes {
         Funnybone = ENTITY_TYPES.register("funnybone", () -> Builder.of(FunnyboneEntity::new, MobCategory.MONSTER).sized(0.5F, 1.2F).build((new ResourceLocation("illageandspillage", "funnybone")).toString()));
         Bone = ENTITY_TYPES.register("bone", () -> Builder.<BoneEntity>of(BoneEntity::new, MobCategory.MONSTER).sized(0.5F, 0.1F).build((new ResourceLocation("illageandspillage", "bone")).toString()));
         SkullBomb = ENTITY_TYPES.register("skull_bomb", () -> Builder.of(SkullBombEntity::new, MobCategory.MONSTER).sized(0.5F, 0.5F).build((new ResourceLocation("illageandspillage", "skull_bomb")).toString()));
+        OldFreakager = ENTITY_TYPES.register("old_freakager", () -> Builder.of(OldFreakagerEntity::new, MobCategory.MONSTER).sized(0.6F, 2.3F).build((new ResourceLocation("illageandspillage", "old_freakager")).toString()));
+        OldRagno = ENTITY_TYPES.register("old_ragno", () -> Builder.of(OldRagnoEntity::new, MobCategory.MONSTER).sized(3.2F, 1.8F).build((new ResourceLocation("illageandspillage", "old_ragno")).toString()));
         OldMagispeller = ENTITY_TYPES.register("old_magispeller", () -> Builder.of(OldMagispellerEntity::new, MobCategory.MONSTER).sized(0.6F, 2.3F).build((new ResourceLocation("illageandspillage", "old_magispeller")).toString()));
         MagiFireball = ENTITY_TYPES.register("magi_fireball", () -> Builder.<MagiFireballEntity>of(MagiFireballEntity::new, MobCategory.MISC).sized(0.5F, 0.5F).clientTrackingRange(4).updateInterval(1).build((new ResourceLocation("illageandspillage", "magi_fireball")).toString()));
         MagiArrow = ENTITY_TYPES.register("magi_arrow", () -> Builder.<MagiArrowEntity>of(MagiArrowEntity::new, MobCategory.MISC).sized(0.5F, 0.5F).clientTrackingRange(4).updateInterval(1).build((new ResourceLocation("illageandspillage", "magi_arrow")).toString()));
@@ -148,6 +156,7 @@ public class ModEntityTypes {
         Kaboomer = ENTITY_TYPES.register("kaboomer", () -> Builder.of(KaboomerEntity::new, MobCategory.MONSTER).sized(1.25F, 3.4F).fireImmune().build((new ResourceLocation("illageandspillage", "kaboomer")).toString()));
         PumpkinBomb = ENTITY_TYPES.register("pumpkin_bomb", () -> Builder.of(PumpkinBombEntity::new, MobCategory.MONSTER).sized(0.75F, 0.75F).build((new ResourceLocation("illageandspillage", "pumpkin_bomb")).toString()));
         Axe = ENTITY_TYPES.register("axe", () -> Builder.<AxeEntity>of(AxeEntity::new, MobCategory.MONSTER).sized(0.2F, 0.2F).build((new ResourceLocation("illageandspillage", "axe")).toString()));
+        OldAxe = ENTITY_TYPES.register("old_axe", () -> Builder.of(OldAxeEntity::new, MobCategory.MONSTER).sized(0.2F, 0.2F).build((new ResourceLocation("illageandspillage", "old_axe")).toString()));
         DarkPotion = ENTITY_TYPES.register("dark_potion", () -> Builder.of(DarkPotionEntity::new, MobCategory.MISC).sized(0.5F, 0.5F).clientTrackingRange(4).updateInterval(1).build((new ResourceLocation("illageandspillage", "dark_potion")).toString()));
         Scythe = ENTITY_TYPES.register("scythe", () -> Builder.of(ScytheEntity::new, MobCategory.MONSTER).sized(0.2F, 0.2F).build((new ResourceLocation("illageandspillage", "scythe")).toString()));
         TrickOrTreat = ENTITY_TYPES.register("trick_or_treat", () -> Builder.of(TrickOrTreatEntity::new, MobCategory.MONSTER).sized(1.0F, 1.8F).build((new ResourceLocation("illageandspillage", "trick_or_treat")).toString()));

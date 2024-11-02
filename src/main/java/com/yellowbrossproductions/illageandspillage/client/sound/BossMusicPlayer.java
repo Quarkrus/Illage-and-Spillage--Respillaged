@@ -1,10 +1,7 @@
 package com.yellowbrossproductions.illageandspillage.client.sound;
 
 import com.yellowbrossproductions.illageandspillage.config.IllageAndSpillageConfig;
-import com.yellowbrossproductions.illageandspillage.entities.FreakagerEntity;
-import com.yellowbrossproductions.illageandspillage.entities.MagispellerEntity;
-import com.yellowbrossproductions.illageandspillage.entities.RagnoEntity;
-import com.yellowbrossproductions.illageandspillage.entities.SpiritcallerEntity;
+import com.yellowbrossproductions.illageandspillage.entities.*;
 import net.minecraft.client.Minecraft;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
@@ -22,6 +19,10 @@ public class BossMusicPlayer {
                 doFreakagerMusic((FreakagerEntity) entity);
             } else if (entity instanceof RagnoEntity) {
                 doRagnoMusic((RagnoEntity) entity);
+            } else if (entity instanceof OldFreakagerEntity) {
+                doOldFreakagerMusic((OldFreakagerEntity) entity);
+            } else if (entity instanceof OldRagnoEntity) {
+                doOldRagnoMusic((OldRagnoEntity) entity);
             } else if (entity instanceof MagispellerEntity) {
                 doMagispellerMusic((MagispellerEntity) entity);
             }
@@ -29,6 +30,29 @@ public class BossMusicPlayer {
     }
 
     public static void doRagnoMusic(RagnoEntity entity) {
+        SoundEvent soundEvent = entity.getTransMusic();
+        if (soundEvent != null && entity.isAlive()) {
+            Player player = Minecraft.getInstance().player;
+            if (bossMusic != null) {
+                float f2 = Minecraft.getInstance().options.getSoundSourceVolume(SoundSource.RECORDS);
+                if (f2 <= 0.0F) {
+                    bossMusic = null;
+                } else if (bossMusic.getBoss() == entity && !entity.canPlayerHearMusic(player)) {
+                    bossMusic.setBoss(null);
+                } else if (bossMusic.getBoss() == null && bossMusic.getSoundEvent() == soundEvent) {
+                    bossMusic.setBoss(entity);
+                }
+            } else if (entity.canPlayerHearMusic(player)) {
+                bossMusic = new BossMusicSound(soundEvent, entity);
+            }
+
+            if (bossMusic != null && !Minecraft.getInstance().getSoundManager().isActive(bossMusic)) {
+                Minecraft.getInstance().getSoundManager().play(bossMusic);
+            }
+        }
+    }
+
+    public static void doOldRagnoMusic(OldRagnoEntity entity) {
         SoundEvent soundEvent = entity.getTransMusic();
         if (soundEvent != null && entity.isAlive()) {
             Player player = Minecraft.getInstance().player;
@@ -75,6 +99,29 @@ public class BossMusicPlayer {
     }
 
     private static void doFreakagerMusic(FreakagerEntity entity) {
+        SoundEvent soundEvent = entity.getBossMusic();
+        if (soundEvent != null && entity.isAlive()) {
+            Player player = Minecraft.getInstance().player;
+            if (bossMusic != null) {
+                float f2 = Minecraft.getInstance().options.getSoundSourceVolume(SoundSource.RECORDS);
+                if (f2 <= 0.0F) {
+                    bossMusic = null;
+                } else if (bossMusic.getBoss() == entity && !entity.canPlayerHearMusic(player)) {
+                    bossMusic.setBoss(null);
+                } else if (bossMusic.getBoss() == null && bossMusic.getSoundEvent() == soundEvent) {
+                    bossMusic.setBoss(entity);
+                }
+            } else if (entity.canPlayerHearMusic(player)) {
+                bossMusic = new BossMusicSound(soundEvent, entity);
+            }
+
+            if (bossMusic != null && !Minecraft.getInstance().getSoundManager().isActive(bossMusic)) {
+                Minecraft.getInstance().getSoundManager().play(bossMusic);
+            }
+        }
+    }
+
+    private static void doOldFreakagerMusic(OldFreakagerEntity entity) {
         SoundEvent soundEvent = entity.getBossMusic();
         if (soundEvent != null && entity.isAlive()) {
             Player player = Minecraft.getInstance().player;

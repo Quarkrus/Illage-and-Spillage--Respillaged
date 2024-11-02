@@ -17,6 +17,7 @@ public class IllageAndSpillageConfig {
     public static ForgeConfigSpec.ConfigValue<List<? extends Integer>> spiritcaller_raidcount;
     public static ForgeConfigSpec.ConfigValue<List<? extends Integer>> freakager_raidcount;
     public static ForgeConfigSpec.ConfigValue<List<? extends Integer>> bossrandomizer_raidcount;
+    public static ForgeConfigSpec.ConfigValue<List<? extends Integer>> old_freakager_raidcount;
     public static ForgeConfigSpec.ConfigValue<List<? extends Integer>> old_magispeller_raidcount;
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> bossrandomizer_bosstypes;
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> bossrandomizer_finalbosstypes;
@@ -97,14 +98,11 @@ public class IllageAndSpillageConfig {
 //    public static final ForgeConfigSpec.ConfigValue<Boolean> changeCrashager;
 //    public static final ForgeConfigSpec.ConfigValue<Boolean> changeFakers;
 
-    public IllageAndSpillageConfig() {
-    }
-
     public static void init(ForgeConfigSpec.Builder common, ForgeConfigSpec.Builder client) {
         client.push("Client Settings");
         cameraShakesAllowed = client.comment("Setting this to false will disable camera shakes.").define("cameraShakesAllowed", true);
         arachnophobeMode = client.comment("Setting this to true will turn on Arachnophobe-Safe Mode, Ragno will become a horrifying monstrosity in a different way").define("arachnophobeMode", false);
-        doJumpscare = client.comment("Setting this to false will disable the jumpscare after killing ragno.").define("doJumpscare", true);
+        doJumpscare = client.comment("Setting this to false will disable the jumpscare after killing ragno", "Requires game restart").worldRestart().define("doJumpscare", true);
         client.pop();
         common.push("Raid settings");
         boss_music = common.comment("Whether or not to play boss music", "Default = true").define("boss_music", true);
@@ -123,6 +121,7 @@ public class IllageAndSpillageConfig {
         freakager_raidcount = common.comment("How many Freakagers each wave", "Requires game restart", "Must have no more and no less than 8 integers").worldRestart().defineList("freakager_raidcount", Arrays.asList(0, 0, 0, 0, 0, 0, 0, 0), (s) -> s instanceof Integer);
         freakager_onlyOneAllowed = common.comment("Controls if Freakager should despawn if it spawns in the 7th wave before the bonus wave.", "Overrides freakager_raidcount", "Default = true").define("freakager_onlyOneAllowed", true);
         freakager_forcefield = common.comment("Should the Freakager only be allowed to fight once all other raiders in the wave are killed?", "Default = true").define("freakager_forcefield", true);
+        old_freakager_raidcount = common.comment("How many Old Freakagers each wave", "Requires game restart", "Must have no more and no less than 8 integers").worldRestart().defineList("oldfreakager_raidcount", Arrays.asList(0, 0, 0, 0, 0, 0, 0, 0), (s) -> s instanceof Integer);
         old_magispeller_raidcount = common.comment("How many Old Magispellers each wave", "Requires game restart", "Must have no more and no less than 8 integers").worldRestart().defineList("oldmagispeller_raidcount", Arrays.asList(0, 0, 0, 0, 0, 0, 0, 0), (s) -> s instanceof Integer);
         common.push("Boss Randomizer settings");
         bossrandomizer_raidcount = common.comment("How many Boss Randomizers each wave", "Requires game restart", "Must have no more and no less than 8 integers", "Note that Boss Randomizers on the final Raid wave will be considered the 'Final Boss'").worldRestart().defineList("bossrandomizer_raidcount", Arrays.asList(0, 0, 0, 0, 1, 0, 0, 1), (s) -> s instanceof Integer);

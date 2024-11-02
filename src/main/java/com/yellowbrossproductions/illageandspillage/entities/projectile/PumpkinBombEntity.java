@@ -1,6 +1,7 @@
 package com.yellowbrossproductions.illageandspillage.entities.projectile;
 
 import com.yellowbrossproductions.illageandspillage.entities.IllagerAttack;
+import com.yellowbrossproductions.illageandspillage.entities.OldRagnoEntity;
 import com.yellowbrossproductions.illageandspillage.util.EntityUtil;
 import com.yellowbrossproductions.illageandspillage.util.IllageAndSpillageSoundEvents;
 import com.yellowbrossproductions.illageandspillage.util.PotionRegisterer;
@@ -118,7 +119,7 @@ public class PumpkinBombEntity extends PathfinderMob implements IllagerAttack {
             this.dead = true;
             this.level().explode(this.getOwner(), this.getX(), this.getY(), this.getZ(), 4.0F, Level.ExplosionInteraction.NONE);
 
-            if (this.getGoopy()) {
+            if (this.getGoopy() && !(this.getOwner() instanceof OldRagnoEntity)) {
                 AreaEffectCloud cloud = new AreaEffectCloud(this.level(), this.getX(), this.getY(), this.getZ());
                 cloud.setRadius(3.0F);
                 cloud.setRadiusOnUse(-0.5F);

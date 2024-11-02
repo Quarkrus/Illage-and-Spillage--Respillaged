@@ -38,6 +38,7 @@ public class TrickOrTreatEntity extends Raider implements IllagerAttack {
     private static final EntityDataAccessor<Integer> TREAT;
     private static final EntityDataAccessor<Boolean> BOUNCE;
     private static final EntityDataAccessor<Boolean> GOOPY;
+    private static final EntityDataAccessor<Boolean> OLD;
     private LivingEntity owner;
     public int circleTime;
     public int bounceTime;
@@ -63,6 +64,7 @@ public class TrickOrTreatEntity extends Raider implements IllagerAttack {
         this.entityData.define(TREAT, 1);
         this.entityData.define(BOUNCE, false);
         this.entityData.define(GOOPY, false);
+        this.entityData.define(OLD, false);
     }
 
     public void applyRaidBuffs(int p_37844_, boolean p_37845_) {
@@ -82,6 +84,14 @@ public class TrickOrTreatEntity extends Raider implements IllagerAttack {
 
     public void setGoopy() {
         this.entityData.set(GOOPY, true);
+    }
+
+    public boolean isOld() {
+        return this.entityData.get(OLD);
+    }
+
+    public void setOld(boolean old) {
+        this.entityData.set(OLD, old);
     }
 
     public void addAdditionalSaveData(CompoundTag p_21484_) {
@@ -107,15 +117,15 @@ public class TrickOrTreatEntity extends Raider implements IllagerAttack {
     }
 
     public boolean canBeAffected(MobEffectInstance p_21197_) {
-        return p_21197_.getEffect() != EffectRegisterer.MUTATION.get() && super.canBeAffected(p_21197_);
+        return (p_21197_.getEffect() != EffectRegisterer.MUTATION.get() || this.isOld()) && super.canBeAffected(p_21197_);
     }
 
     public boolean causeFallDamage(float p_147187_, float p_147188_, DamageSource p_147189_) {
-        return false;
+        return this.isOld() && super.causeFallDamage(p_147187_, p_147188_, p_147189_);
     }
 
     public boolean hurt(DamageSource p_37849_, float p_37850_) {
-        return (this.owner == null || p_37849_.getEntity() != this.owner) && super.hurt(p_37849_, p_37850_);
+        return ((this.owner == null || p_37849_.getEntity() != this.owner) || this.isOld()) && super.hurt(p_37849_, p_37850_);
     }
 
     public void tick() {
@@ -375,5 +385,6 @@ public class TrickOrTreatEntity extends Raider implements IllagerAttack {
         TREAT = SynchedEntityData.defineId(TrickOrTreatEntity.class, EntityDataSerializers.INT);
         BOUNCE = SynchedEntityData.defineId(TrickOrTreatEntity.class, EntityDataSerializers.BOOLEAN);
         GOOPY = SynchedEntityData.defineId(TrickOrTreatEntity.class, EntityDataSerializers.BOOLEAN);
+        OLD = SynchedEntityData.defineId(TrickOrTreatEntity.class, EntityDataSerializers.BOOLEAN);
     }
 }

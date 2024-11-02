@@ -937,6 +937,8 @@ public class FreakagerEntity extends AbstractIllager implements IllagerBoss, ICa
         } else {
             ++this.customDeathTime;
 
+            this.clearFire();
+
             if (this.customDeathTime == 15) {
                 this.setFreakagerFace(0);
                 this.playSound(IllageAndSpillageSoundEvents.ENTITY_FREAKAGER_PUMPKINBOMBS.get(), 2.0F, 1.0F);

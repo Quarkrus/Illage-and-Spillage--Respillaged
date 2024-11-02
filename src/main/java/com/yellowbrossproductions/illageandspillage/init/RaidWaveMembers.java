@@ -21,6 +21,7 @@ public class RaidWaveMembers {
     public static Raid.RaiderType ABSORBER;
     public static Raid.RaiderType PRESERVER;
     public static Raid.RaiderType FREAKAGER;
+    public static Raid.RaiderType OLD_FREAKAGER;
     public static Raid.RaiderType OLD_MAGISPELLER;
 
     public static void registerWaveMembers() {
@@ -34,6 +35,7 @@ public class RaidWaveMembers {
         ABSORBER = translateToWaves(ModEntityTypes.Absorber.get(), IllageAndSpillageConfig.absorber_raidcount.get());
         PRESERVER = translateToWaves(ModEntityTypes.Preserver.get(), IllageAndSpillageConfig.preserver_raidcount.get());
         FREAKAGER = translateToWaves(ModEntityTypes.Freakager.get(), IllageAndSpillageConfig.freakager_raidcount.get());
+        OLD_FREAKAGER = translateToWaves(ModEntityTypes.OldFreakager.get(), IllageAndSpillageConfig.old_freakager_raidcount.get());
         OLD_MAGISPELLER = translateToWaves(ModEntityTypes.OldMagispeller.get(), IllageAndSpillageConfig.old_magispeller_raidcount.get());
     }
 

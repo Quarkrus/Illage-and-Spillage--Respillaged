@@ -5,33 +5,20 @@ import com.mojang.blaze3d.vertex.*;
 import com.yellowbrossproductions.illageandspillage.config.IllageAndSpillageConfig;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.renderer.GameRenderer;
-import net.minecraft.client.renderer.Rect2i;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
 
 import java.util.Random;
 
 @OnlyIn(Dist.CLIENT)
-@Mod.EventBusSubscriber(modid = "illageandspillage", bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class JumpscareOverlay {
     private static final ResourceLocation TEXTURE = new ResourceLocation("illageandspillage", "textures/entity/freakager/jumpscare1.png");
     private static final ResourceLocation TEXTURE_OUTLINE = new ResourceLocation("illageandspillage", "textures/entity/freakager/jumpscare2.png");
 
     public static JumpscareOverlay JUMPSCARE_OVERLAY = new JumpscareOverlay();
 
-    private static final Rect2i[] FRAMES = {
-            new Rect2i(0, 0, 13, 6),
-            new Rect2i(0, 7, 13, 6),
-            new Rect2i(0, 14, 13, 6),
-            new Rect2i(0, 21, 13, 6),
-            new Rect2i(15, 1, 15, 8),
-            new Rect2i(15, 16, 15, 12),
-    };
     private static final int ANIMATION_APPEAR = 10;
     private static final int ANIMATION_BLINK = 60;
     private static final int ANIMATION_SCARE1 = 20;
@@ -47,8 +34,7 @@ public class JumpscareOverlay {
         this.visible = true;
     }
 
-    @SubscribeEvent
-    public static void clientTick(TickEvent.ClientTickEvent event) {
+    public void clientTick() {
         if (JUMPSCARE_OVERLAY.visible) {
             JUMPSCARE_OVERLAY.progress++;
             if (JUMPSCARE_OVERLAY.progress >= ANIMATION_TOTAL) {

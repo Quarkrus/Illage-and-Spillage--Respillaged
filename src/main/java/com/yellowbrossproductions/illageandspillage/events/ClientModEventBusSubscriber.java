@@ -1,4 +1,4 @@
-package com.yellowbrossproductions.illageandspillage.util;
+package com.yellowbrossproductions.illageandspillage.events;
 
 import com.yellowbrossproductions.illageandspillage.client.model.*;
 import com.yellowbrossproductions.illageandspillage.client.render.*;
@@ -18,6 +18,7 @@ import net.minecraft.client.renderer.entity.RenderLayerParent;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.client.event.RegisterGuiOverlaysEvent;
 import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
@@ -26,8 +27,9 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 
+@OnlyIn(Dist.CLIENT)
 @EventBusSubscriber(modid = "illageandspillage", bus = Bus.MOD, value = Dist.CLIENT)
-public class ClientEventBusSubscriber {
+public class ClientModEventBusSubscriber {
     @SubscribeEvent
     public static void registerEntityRenders(EntityRenderersEvent.AddLayers event) {
         event.getContext().getEntityRenderDispatcher().getSkinMap().forEach((model, renderer) -> {
@@ -47,9 +49,7 @@ public class ClientEventBusSubscriber {
     @SubscribeEvent
     public static void registerGuiOverlays(RegisterGuiOverlaysEvent event) {
         event.registerBelowAll("webbed", WebbedOverlay.WEBBED_OVERLAY);
-        event.registerAbove(VanillaGuiOverlay.PORTAL.id(), "jumpscare", (forgeGui, guiGraphics, partialTicks, screenWidth, screenHeight) -> {
-            JumpscareOverlay.JUMPSCARE_OVERLAY.render(guiGraphics, partialTicks, screenWidth, screenHeight);
-        });
+        event.registerAbove(VanillaGuiOverlay.PORTAL.id(), "jumpscare", (forgeGui, guiGraphics, partialTicks, screenWidth, screenHeight) -> JumpscareOverlay.JUMPSCARE_OVERLAY.render(guiGraphics, partialTicks, screenWidth, screenHeight));
     }
 
     @SubscribeEvent

@@ -39,8 +39,9 @@ public class IllageAndSpillageConfig {
     public static ForgeConfigSpec.IntValue ghostblock_repairTime;
     public static ForgeConfigSpec.BooleanValue devastator_ghostBlocks;
     public static ForgeConfigSpec.BooleanValue cameraShakesAllowed;
-    public static ForgeConfigSpec.BooleanValue arachnophobeMode;
+    public static ForgeConfigSpec.BooleanValue webbedScreen;
     public static ForgeConfigSpec.BooleanValue doJumpscare;
+    public static ForgeConfigSpec.BooleanValue arachnophobeMode;
     public static ForgeConfigSpec.BooleanValue absorber_damageMode;
     public static ForgeConfigSpec.BooleanValue magispeller_balloonAllowed;
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> preserver_cannotProtect;
@@ -101,8 +102,9 @@ public class IllageAndSpillageConfig {
     public static void init(ForgeConfigSpec.Builder common, ForgeConfigSpec.Builder client) {
         client.push("Client Settings");
         cameraShakesAllowed = client.comment("Setting this to false will disable camera shakes.").define("cameraShakesAllowed", true);
-        arachnophobeMode = client.comment("Setting this to true will turn on Arachnophobe-Safe Mode, Ragno will become a horrifying monstrosity in a different way").define("arachnophobeMode", false);
+        webbedScreen = client.comment("Setting this to false will disable the webbed screen overlay", "Requires game restart").worldRestart().define("webbedScreen", true);
         doJumpscare = client.comment("Setting this to false will disable the jumpscare after killing ragno", "Requires game restart").worldRestart().define("doJumpscare", true);
+        arachnophobeMode = client.comment("Setting this to true will turn on Arachnophobe-Safe Mode, Ragno will become a horrifying monstrosity in a different way").define("arachnophobeMode", false);
         client.pop();
         common.push("Raid settings");
         boss_music = common.comment("Whether or not to play boss music", "Default = true").define("boss_music", true);

@@ -651,6 +651,10 @@ public class RagnoEntity extends Raider implements IllagerBoss, ICanBeAnimated {
             this.playSound(IllageAndSpillageSoundEvents.ENTITY_RAGNO_COUGH.get(), 2.0F, 1.0F);
         }
 
+        if (this.phaseTicks == 223) {
+            this.playSound(SoundEvents.CAMEL_EAT, 3.0F, 1.0F);
+        }
+
         if (this.phaseTicks == 250) {
             this.isPlayingPhase = false;
             this.setStunHealth(this.getMaxStunHealth());

@@ -7,7 +7,6 @@ import com.yellowbrossproductions.illageandspillage.init.ModEntityTypes;
 import com.yellowbrossproductions.illageandspillage.packet.PacketHandler;
 import com.yellowbrossproductions.illageandspillage.particle.ParticleRegisterer;
 import com.yellowbrossproductions.illageandspillage.util.*;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.SpawnPlacements.Type;
@@ -26,8 +25,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
 import org.slf4j.Logger;
-
-import java.util.Locale;
 
 @Mod(IllageAndSpillage.MOD_ID)
 public class IllageAndSpillage {
@@ -75,6 +72,8 @@ public class IllageAndSpillage {
         SpawnPlacements.register(ModEntityTypes.Absorber.get(), Type.ON_GROUND, Types.MOTION_BLOCKING_NO_LEAVES, Mob::checkMobSpawnRules);
         SpawnPlacements.register(ModEntityTypes.Freakager.get(), Type.ON_GROUND, Types.MOTION_BLOCKING_NO_LEAVES, Mob::checkMobSpawnRules);
         SpawnPlacements.register(ModEntityTypes.Ragno.get(), Type.ON_GROUND, Types.MOTION_BLOCKING_NO_LEAVES, Mob::checkMobSpawnRules);
+        SpawnPlacements.register(ModEntityTypes.OldFreakager.get(), Type.ON_GROUND, Types.MOTION_BLOCKING_NO_LEAVES, Mob::checkMobSpawnRules);
+        SpawnPlacements.register(ModEntityTypes.OldRagno.get(), Type.ON_GROUND, Types.MOTION_BLOCKING_NO_LEAVES, Mob::checkMobSpawnRules);
         SpawnPlacements.register(ModEntityTypes.OldMagispeller.get(), Type.ON_GROUND, Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules);
         SpawnPlacements.register(ModEntityTypes.Kaboomer.get(), Type.ON_GROUND, Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules);
         PacketHandler.init();
@@ -82,10 +81,6 @@ public class IllageAndSpillage {
 
     private void registerCapabilities(RegisterCapabilitiesEvent event) {
         event.register(IWebbed.class);
-    }
-
-    public static ResourceLocation prefix(String name) {
-        return new ResourceLocation("illageandspillage", name.toLowerCase(Locale.ROOT));
     }
 
     @EventBusSubscriber(bus = Bus.MOD)

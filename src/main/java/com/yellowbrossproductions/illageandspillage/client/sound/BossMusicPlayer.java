@@ -7,7 +7,12 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.raid.Raider;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 
+@Mod.EventBusSubscriber(modid = "illageandspillage", bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
 public class BossMusicPlayer {
     public static BossMusicSound bossMusic;
 
@@ -173,6 +178,29 @@ public class BossMusicPlayer {
                 bossMusic.setBoss(null);
             }
 
+        }
+    }
+
+    @SubscribeEvent
+    public static void onClientTick(TickEvent.ClientTickEvent event) {
+        if (event.phase != TickEvent.Phase.END) return;
+
+        if (bossMusic != null && bossMusic.shouldChangeMusic()) {
+            Raider boss = bossMusic.getBoss();
+            if (boss instanceof RagnoEntity) {
+                Minecraft.getInstance().getSoundManager().stop(bossMusic);
+                BossMusicPlayer.bossMusic = null;
+                BossMusicSound newMusic = new BossMusicSound(((RagnoEntity) boss).getBossMusic(), boss);
+                Minecraft.getInstance().getSoundManager().play(newMusic);
+                BossMusicPlayer.bossMusic = newMusic;
+            } else if (boss instanceof OldRagnoEntity) {
+                Minecraft.getInstance().getSoundManager().stop(bossMusic);
+                BossMusicPlayer.bossMusic = null;
+                BossMusicSound newMusic = new BossMusicSound(((OldRagnoEntity) boss).getBossMusic(), boss);
+                Minecraft.getInstance().getSoundManager().play(newMusic);
+                BossMusicPlayer.bossMusic = newMusic;
+            }
+            bossMusic.resetChangeMusic();
         }
     }
 }

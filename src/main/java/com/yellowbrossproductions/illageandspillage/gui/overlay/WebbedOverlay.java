@@ -5,12 +5,16 @@ import com.mojang.blaze3d.vertex.BufferBuilder;
 import com.mojang.blaze3d.vertex.DefaultVertexFormat;
 import com.mojang.blaze3d.vertex.Tesselator;
 import com.mojang.blaze3d.vertex.VertexFormat;
+import com.yellowbrossproductions.illageandspillage.config.IllageAndSpillageConfig;
 import com.yellowbrossproductions.illageandspillage.util.EntityUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.gui.overlay.IGuiOverlay;
 
+@OnlyIn(Dist.CLIENT)
 public class WebbedOverlay {
     private static final ResourceLocation OVERLAY = new ResourceLocation("illageandspillage", "textures/entity/freakager/webbed_outline.png");
 
@@ -22,6 +26,7 @@ public class WebbedOverlay {
     };
 
     public static void renderScreenOverlay(ResourceLocation p_168709_, float p_168710_, int screenWidth, int screenHeight) {
+        if (!IllageAndSpillageConfig.webbedScreen.get()) return;
         RenderSystem.disableDepthTest();
         RenderSystem.depthMask(false);
         RenderSystem.defaultBlendFunc();

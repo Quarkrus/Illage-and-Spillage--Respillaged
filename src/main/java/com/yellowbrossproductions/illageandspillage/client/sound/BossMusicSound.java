@@ -16,6 +16,7 @@ public class BossMusicSound extends AbstractTickableSoundInstance {
     private int timeUntilFade;
     private final SoundEvent soundEvent;
     ControlledAnimation volumeControl;
+    private boolean shouldChangeMusic;
 
     public BossMusicSound(SoundEvent sound, Raider boss) {
         super(sound, SoundSource.RECORDS, boss.getRandom());
@@ -55,19 +56,11 @@ public class BossMusicSound extends AbstractTickableSoundInstance {
             }
         }
 
-        if (boss instanceof RagnoEntity && soundEvent == IllageAndSpillageSoundEvents.ENTITY_RAGNO_TRANS.get() && this.ticksExisted >= 2831) {
-            this.stop();
-            BossMusicPlayer.bossMusic = null;
-            BossMusicSound newMusic = new BossMusicSound(((RagnoEntity) boss).getBossMusic(), boss);
-            Minecraft.getInstance().getSoundManager().play(newMusic);
-            BossMusicPlayer.bossMusic = newMusic;
+        if (boss instanceof RagnoEntity && soundEvent == IllageAndSpillageSoundEvents.ENTITY_RAGNO_TRANS.get() && this.ticksExisted >= 516) {
+            shouldChangeMusic = true;
             return;
-        } else if (boss instanceof OldRagnoEntity && soundEvent == IllageAndSpillageSoundEvents.ENTITY_RAGNO_TRANS.get() && this.ticksExisted >= 2831) {
-            this.stop();
-            BossMusicPlayer.bossMusic = null;
-            BossMusicSound newMusic = new BossMusicSound(((OldRagnoEntity) boss).getBossMusic(), boss);
-            Minecraft.getInstance().getSoundManager().play(newMusic);
-            BossMusicPlayer.bossMusic = newMusic;
+        } else if (boss instanceof OldRagnoEntity && soundEvent == IllageAndSpillageSoundEvents.ENTITY_RAGNO_TRANS.get() && this.ticksExisted >= 516) {
+            shouldChangeMusic = true;
             return;
         }
 
@@ -82,6 +75,14 @@ public class BossMusicSound extends AbstractTickableSoundInstance {
         }
 
         ++this.ticksExisted;
+    }
+
+    public boolean shouldChangeMusic() {
+        return shouldChangeMusic;
+    }
+
+    public void resetChangeMusic() {
+        shouldChangeMusic = false;
     }
 
     public void setBoss(Raider boss) {
